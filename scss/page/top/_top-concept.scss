@@ -1,0 +1,80 @@
+@use "../../global" as g;
+
+/*!
+page > top > top-concept
+------------------------------
+*/
+.top-concept-body {
+    position: relative;
+
+    &::before {
+        content: "";
+        display: block;
+        background-image: url(../img/img-top-concept@2x.png);
+        background-image: image-set(url(../img/img-top-concept.png) 1x, url(../img/img-top-concept@2x.png) 2x);
+        background-image: -webkit-image-set(url(../img/img-top-concept.png) 1x, url(../img/img-top-concept@2x.png) 2x);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 0;
+        padding-top: 92.5%;
+        margin-left: 20%;
+        margin-right: 5%;
+
+        @include g.mq() {
+            height: 500px;
+            width: 50%;
+            padding-top: 0;
+            margin-left: auto;
+            margin-right: 5%;
+        }
+
+        @include g.mq(lg) {
+            width: 50%;
+            height: 600px;
+            margin-right: 48px;
+        }
+    }
+}
+.top-concept-inner {
+    @include g.mq() {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+}
+.top-concept-copy {
+    font-size: 28px;
+    font-weight: 500;
+    color: var(--color-font-primary);
+    letter-spacing: 0.06em;
+
+    span {
+        display: block;
+    }
+
+    @include g.mq(lg) {
+        font-size: 36px;
+    }
+
+}
+.top-concept-copy02 {
+    font-size: 64px;
+    letter-spacing: 0.08em;
+    font-family: var(--font-family-english);
+    color: var(--color-font-primary);
+
+    @include g.mq(lg) {
+        font-size: 84px;
+    }
+}
+.top-concept-description {
+    margin-top: 8px;
+    letter-spacing: 0.08em;
+
+    @include g.mq() {
+        width: 40%;
+    }
+
+}

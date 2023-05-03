@@ -1,0 +1,33 @@
+@use "../global" as g;
+
+/*!
+component > title
+*/
+/*! level2 */
+.c-title-level2 {
+    text-transform: capitalize;
+    color: var(--color-font-primary);
+    font-size: 24px;
+    font-family: var(--font-family-english);
+    letter-spacing: 0.08em;
+
+    &--center {
+        text-align: center;
+        padding-left: 0.08em;
+    }
+
+    @include g.mq() {
+        font-size: 36px;
+    }
+}
+.c-title-level2-border {
+    border-bottom: solid 2px var(--color-border-primary);
+}
+
+/*! level3 */
+.c-title-level3 {
+    font-family: var(--font-family-english);
+    color: var(--color-font-black);
+    font-size: 26px;
+    letter-spacing: 0.08em;
+}

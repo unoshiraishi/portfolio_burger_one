@@ -1,0 +1,75 @@
+@use "../global" as g;
+
+/*!
+layout > footer
+----------------------------
+*/
+.footer-body {
+    padding: 64px 0;
+
+    @include g.mq() {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 96px 0;
+    }
+}
+.footer-inner {
+    @include g.mq() {
+        display: flex;
+    }
+}
+.footer-logo {
+    width: 186px;
+    margin: 0 auto;
+
+    img {
+        display: block;
+    }
+}
+.footer-company-info {
+    text-align: center;
+    margin-top: 24px;
+    font-size: 12px;
+    line-height: 2.2;
+
+    span {
+        display: block;
+    }
+
+    @include g.mq() {
+        font-size: 14px;
+        text-align: left;
+        margin-top: 0;
+        margin-left: 32px;
+        line-height: 2;
+    }
+}
+.footer-sns-list {
+    display: flex;
+    margin-top: 25px;
+    justify-content: center;
+
+    @include g.mq() {
+        margin: 0;
+    }
+}
+.footer-sns-item {
+    font-size: 18px;
+    font-family: var(--font-family-english);
+    letter-spacing: 0.08em;
+    padding-left: 0.08em;
+
+    &:not(:first-child) {
+        margin-left: 16px;
+    }
+}
+.footer-copyright {
+    display: grid;
+    height: 65px;
+    background-color: var(--color-bg-secondary);
+    color: var(--color-font-white);
+    font-size: 12px;
+    place-items: center;
+    font-family: var(--font-family-copyright);
+}

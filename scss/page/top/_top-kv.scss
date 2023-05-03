@@ -1,0 +1,40 @@
+@use "../../global" as g;
+/*!
+page > top > top-kv
+------------------------------
+*/
+.top-kv-inner {
+    height: 75vh;
+    background-image: url(../img/bg-top-kv-sp@2x.jpg);
+    background-image: image-set(url(../img/bg-top-kv-sp.jpg) 1x, url(../img/bg-top-kv-sp@2x.jpg) 2x);
+    background-image: -webkit-image-set(url(../img/bg-top-kv-sp.jpg) 1x, url(../img/bg-top-kv-sp@2x.jpg) 2x);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: grid;
+    place-items: center;
+
+    @include g.mq() {
+        background-image: url(../img/bg-top-kv@2x.jpg);
+        background-image: image-set(url(../img/bg-top-kv.jpg) 1x, url(../img/bg-top-kv@2x.jpg) 2x);
+        background-image: -webkit-image-set(url(../img/bg-top-kv.jpg) 1x, url(../img/bg-top-kv@2x.jpg) 2x);
+    }
+
+    @include g.mq(xl) {
+        height: 768px;
+    }
+}
+.top-kv-logo {
+    width: 90%;
+    max-width: 566px;
+
+    img {
+        display: block;
+    }
+
+    @include g.mq() {
+        position: absolute;
+        top: 56px;
+        left: 48px;
+    }
+}
