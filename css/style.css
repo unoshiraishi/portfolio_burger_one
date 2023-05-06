@@ -565,6 +565,33 @@ page > top > top-menu
   letter-spacing: 0.08em;
 }
 
+/*
+** intersection obserber
+*/
+.top-menu-item {
+  opacity: 0;
+  transform: translateY(40px);
+}
+.top-menu-item.appear {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s linear 0s, transform 0.5s linear 0s;
+}
+@media screen and (min-width: 768px) {
+  .top-menu-item:nth-child(1) {
+    transition-delay: 0s;
+  }
+  .top-menu-item:nth-child(2) {
+    transition-delay: 0.2s;
+  }
+  .top-menu-item:nth-child(3) {
+    transition-delay: 0s;
+  }
+  .top-menu-item:nth-child(4) {
+    transition-delay: 0.2s;
+  }
+}
+
 /*!
 page > top > top-shop
 ------------------------------
