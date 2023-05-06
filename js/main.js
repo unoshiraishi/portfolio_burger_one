@@ -1,6 +1,6 @@
 'use strict';
  {
-    // const target = document.querySelector('img');
+    //ふわっと画像を表示させるための監視
     const targets = document.querySelectorAll('.top-menu-item');
 
     function callback(entries, obs) {
@@ -25,4 +25,26 @@
     targets.forEach(target => {
         observer.observe(target);
     });
+
+    //テキストをバウンスさせるための監視
+    const targetText = document.querySelector('.top-concept-text');
+
+    function textCallback(entries, obs) {
+        console.log(entries[0]);
+
+        if(!entries[0].isIntersecting){
+            return;
+        }
+
+        entries[0].target.classList.add('animated','bounce');
+        obs.unobserve(entries[0].target);
+    }
+
+    const textOptions = {
+        threshold: 0,
+        ootMargin: '0px 0px -200px',
+    };
+
+    const textObserver = new IntersectionObserver(textCallback, textOptions);
+    textObserver.observe(targetText);
 }

@@ -64,13 +64,15 @@ page > top > top-concept
     letter-spacing: 0.08em;
     font-family: var(--font-family-english);
     color: var(--color-font-primary);
+    line-height: 1;
+    margin-top: 8px;
 
     @include g.mq(lg) {
         font-size: 84px;
     }
 }
 .top-concept-description {
-    margin-top: 8px;
+    margin-top: 48px;
     letter-spacing: 0.08em;
 
     @include g.mq() {
